@@ -48,12 +48,12 @@ create table campaign_info (
  Select Sum(impressions)
  From marketing_data
  Order by date
-2. Write a query to get the top three revenue-generating states in order of best to worst. How much revenue did the third best state generate?'
+2. Write a query to get the top three revenue-generating states in order of best to worst. How much revenue did the third best state generate?
    Select TOP 3 Sum(website_revenue)
    from website_revenue
    Order By state DESC
  "Ohio was the third best and generated $37577"
-'3. Write a query that shows total cost, impressions, clicks, and revenue of each campaign. Make sure to include the campaign name in the output.
+'3. Write a query that shows total cost, impressions, clicks, and revenue of each campaign. Make sure to include the campaign name in the output.'
  Select cost AS total_cost, impressions, clicks
  from marketing_data
      (Select revenue
