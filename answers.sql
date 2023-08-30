@@ -42,16 +42,17 @@ create table campaign_info (
 2. Answer the questions below in a single SQL file - e.g answers.sql
 3. Provide Link to Forked Repository to PMG Careers Team"
 
-### Please provide a SQL statement for each question
+'### Please provide a SQL statement for each question'
 
 '1. Write a query to get the sum of impressions by day.'
  Sekect Sum(impressions)
  From marketing_data
  Order by date
 '2. Write a query to get the top three revenue-generating states in order of best to worst. How much revenue did the third best state generate?'
-   Select Sum(website_revenue)
+   Select TOP 3 Sum(website_revenue)
    from website_revenue
    Order By state DESC
+ 
 '4. Write a query that shows total cost, impressions, clicks, and revenue of each campaign. Make sure to include the campaign name in the output.'
 '5. Write a query to get the number of conversions of Campaign5 by state. Which state generated the most conversions for this campaign?'
 '6. In your opinion, which campaign was the most efficient, and why?'
